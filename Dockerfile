@@ -14,6 +14,6 @@ RUN --mount=type=cache,target=/root/.cache/pip \
 
 COPY . .
 
-EXPOSE 5010/tcp
+EXPOSE 5000/tcp
 
-CMD ["gunicorn", "-w", "2", "-b", "0.0.0.0:5010", "app:app"]
+CMD ["gunicorn", "-w", "2", "-b", "0.0.0.0:5000", "app:app"]
