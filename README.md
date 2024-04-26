@@ -58,7 +58,7 @@ $ docker build -t frases-aleatorias-api .
 Uma vez criada a imagem, para executar o container basta executar, **como administrador**, o seguinte comando:
 
 ```shell
-$ docker run -d -p 5010:5010 frases-aleatorias-api
+$ docker run -d -p 5010:5000 frases-aleatorias-api
 ```
 
 Uma vez executando, para acessar o swagger desta api, basta abrir o [http://localhost:5010/#/](http://localhost:5010/#/) no navegador.
