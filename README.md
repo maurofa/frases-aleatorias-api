@@ -1,7 +1,7 @@
 # frases-aleatorias-api
 API que provê frases aleatórias.
 
-Ela utiliza outras duas APIs externas para buscar as frases em inglês e uma para traduzir para o português.
+Ela utiliza outras duas APIs externas para buscar as frases em inglês.
 
 Ele vai contar com um serviço:
 - GET /frase - retornando uma frase aleatória de um dos serviços em português.
@@ -9,7 +9,6 @@ Ele vai contar com um serviço:
 API externa:
 - https://uselessfacts.jsph.pl/ - fatos inúteis aleatórios
 - https://github.com/sameerkumar18/geek-joke-api - permite que você busque uma piada aleatória relacionada a geeks/programação para uso em todos os tipos de aplicativos.
-- https://libretranslate.com/docs/ - api que para traduzir as frases
 
 Estas APIs não precisam de autenticação.
 
@@ -43,7 +42,7 @@ automaticamente após uma mudança no código fonte.
 (env)$ flask run --host 127.0.0.1 --port 5010 --reload
 ```
 
-Abra o [http://localhost:5000/#/](http://localhost:5010/#/) no navegador para verificar o status da API em execução.
+Abra o [http://localhost:5010/#/](http://localhost:5010/#/) no navegador para verificar o status da API em execução.
 
 ## Como executar através do Docker
 
@@ -53,13 +52,13 @@ Navegue até o diretório que contém o Dockerfile no terminal e seus arquivos d
 Execute **como administrador** o seguinte comando para construir a imagem Docker:
 
 ```shell
-$ docker build -t nome_da_sua_imagem .
+$ docker build -t frases-aleatorias-api .
 ```
 
-Uma vez criada a imagem, para executar o container basta executar, **como administrador**, seguinte o comando:
+Uma vez criada a imagem, para executar o container basta executar, **como administrador**, o seguinte comando:
 
 ```shell
-$ docker run -d -p 8080:80 nome_da_sua_imagem
+$ docker run -d -p 5010:5010 frases-aleatorias-api
 ```
 
-Uma vez executando, para acessar o front-end, basta abrir o [http://localhost:8080/#/](http://localhost:8080/#/) no navegador.
+Uma vez executando, para acessar o swagger desta api, basta abrir o [http://localhost:5010/#/](http://localhost:5010/#/) no navegador.

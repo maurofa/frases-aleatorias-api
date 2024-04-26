@@ -1,6 +1,5 @@
 from pydantic import BaseModel
 from model.frase import Frase
-import math
 
 class FraseViewSchema(BaseModel):
   """Define como uma frase será retornada
